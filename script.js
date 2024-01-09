@@ -43,11 +43,7 @@ const showWinner = (winner) =>
     message.innerText = `Congratulations, Player ${winner} have won the game.`;
     messagecontainer.classList.remove("hidden");
 }
-/*const showDraw = (winner) =>
-{
-    message.innerText = "It's a draw.";
-    messagecontainer.classList.remove("hidden");
-}*/
+
 const disableButtons = () =>
 {
     for (let box of boxes) {
@@ -64,17 +60,22 @@ const winnerCheck = () =>
             if (valPos1 === valPos2 && valPos2 === valPos3 && valPos1 === valPos3) {
                 showWinner(valPos1);
                 disableButtons();
+                break;
             }
-        
         }
-       /* else
-        {
-            showDraw(valPos1);
-        }*/
     }
-
- 
-}
+    let draw = true;
+  for (let box of boxes) {
+    if (box.innerText === "") {
+      draw = false;
+      break;
+    }
+  }
+  if (draw) {
+    message.innerText = "It's a draw!";
+    messagecontainer.classList.remove("hidden");
+  }
+};
 const resetGame = () =>
 {
     player_X = true;
