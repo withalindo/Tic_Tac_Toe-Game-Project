@@ -55,7 +55,7 @@ const winnerCheck = () =>
         let valPos1 = boxes[pattern[0]].innerText;
         let valPos2 = boxes[pattern[1]].innerText;
         let valPos3 = boxes[pattern[2]].innerText;
-        if (valPos1 != "" && valPos2 != "" & valPos3 != "") {
+        if (valPos1 != "" && valPos2 != "" && valPos3 != "") {
             if (valPos1 === valPos2 && valPos2 === valPos3 && valPos1 === valPos3) {
                 showWinner(valPos1);
                 disableButtons();
