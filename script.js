@@ -5,7 +5,7 @@ let messagecontainer = document.querySelector(".msg_container");
 let message = document.querySelector(".msg");
 
 let player_X = true; // For player X
-const wining_pattern = [
+const winning_pattern = [
     ["0","1","2"],
     ["3","4","5"],
     ["6","7","8"],
@@ -51,7 +51,7 @@ const disableButtons = () =>
 }
 const winnerCheck = () =>
 {
-    for (let pattern of wining_pattern) {
+    for (let pattern of winning_pattern) {
         let valPos1 = boxes[pattern[0]].innerText;
         let valPos2 = boxes[pattern[1]].innerText;
         let valPos3 = boxes[pattern[2]].innerText;
