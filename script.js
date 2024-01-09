@@ -43,6 +43,11 @@ const showWinner = (winner) =>
     message.innerText = `Congratulations, Player ${winner} have won the game.`;
     messagecontainer.classList.remove("hidden");
 }
+/*const showDraw = (winner) =>
+{
+    message.innerText = "It's a draw.";
+    messagecontainer.classList.remove("hidden");
+}*/
 const disableButtons = () =>
 {
     for (let box of boxes) {
@@ -62,6 +67,10 @@ const winnerCheck = () =>
             }
         
         }
+       /* else
+        {
+            showDraw(valPos1);
+        }*/
     }
 
  
